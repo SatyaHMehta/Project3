@@ -88,3 +88,36 @@
     font-weight: 500;
     cursor:pointer;
 }
+@media screen and (max-width: 480px) {
+    .container{
+      height: auto;
+      text-align: center;
+      flex-direction: column;
+    }
+    .right{
+      padding-bottom: 10px;
+    }
+    .imgContainer{
+      width: 70vw;
+      height: 70vw;
+    }
+    .title{
+      margin: 0;
+    }
+    .sizes{
+      width: 100%;
+      padding: 0 60px;
+    }
+    .sides{
+      flex-direction: column;
+      padding: 0 10%;
+    }
+    .option{
+      margin: 10px;
+      font-size:19px;
+    }
+    .button, .quantity{
+      height: 50px;
+      padding: 10px 20px;
+    }
+}

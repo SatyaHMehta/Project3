@@ -1,12 +1,16 @@
 import React from "react";
 import Image from "next/image";
 import styles from "../styles/FoodCard.module.css";
+import Link from "next/link"
 
-export default function FoodCard() {
+export default function FoodCard({product}) {
+
   return <div className={styles.container}>
-      <Image src='/img/IndianFood1.PNG' alt='' width='500' height='500'/>
-        <h1 className={styles.title}>Tandoori Chicken</h1>
-        <span className={styles.price}>$14.99</span>
-        <p className={styles.desc}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <Link href={`/product/${product._id}`} passHref>
+      <Image src={product.img} alt='' width='500' height='500'/>
+    </Link>
+        <h1 className={styles.title}>{product.title}</h1>
+        <span className={styles.price}>{product.prices[0]}</span>
+        <p className={styles.desc}>{product.desc}</p>
       </div>;
 }

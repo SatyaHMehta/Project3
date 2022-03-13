@@ -1,10 +1,10 @@
 import styles from "../styles/FoodList.module.css";
 import FoodCard from "./FoodCard";
 
-export default function FoodList() {
+export default function FoodList({ productList }) {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Best pizza in town</h1>
+      <h1 className={styles.title}>Best Indian Food in Town</h1>
       <p className={styles.desc}>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa fugit,
         accusamus impedit magnam architecto officia sint praesentium minus quasi
@@ -12,14 +12,9 @@ export default function FoodList() {
         aliquid.
       </p>
       <div className={styles.wrapper}>
-      <FoodCard />
-      <FoodCard />
-      <FoodCard />
-      <FoodCard />
-      <FoodCard />
-      <FoodCard />
-      <FoodCard />
-      <FoodCard />
+        {productList.map((product) => (
+          <FoodCard key={product._id} product={product}/>
+        ))}
       </div>
     </div>
   );
