@@ -7,7 +7,7 @@ export default function Product({ food }) {
   const [price, setPrice] = useState(food.prices[0]);
   const [size, setSize] = useState(0);
   const [quantity, setQuantity] = useState(1);
-  const [extras, setExtra] = useState([]);
+  const [extras, setExtras] = useState([]);
 
     const changePrice = (number) =>{
       setPrice(price+number)
