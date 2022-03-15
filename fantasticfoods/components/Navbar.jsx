@@ -1,13 +1,21 @@
 import React from "react";
 import styles from "../styles/Navbar.module.css";
 import Image from "next/image";
+import { useSelector } from "react-redux";
+import Link from "next/link";
 
 export default function Navbar() {
+  const quantity = useSelector((state) => state.cart.quantity);
   return (
     <div className={styles.container}>
       <div className={styles.item}>
         <div className={styles.callButton}>
-          <Image src="/img/phone-icon-circle-4.jpg" alt="" width="32" height="32" />
+          <Image
+            src="/img/phone-icon-circle-4.jpg"
+            alt=""
+            width="32"
+            height="32"
+          />
         </div>
         <div className={styles.texts}>
           <div className={styles.text}>ORDER NOW!</div>
@@ -25,12 +33,14 @@ export default function Navbar() {
           <li className={styles.listItem}>Contact</li>
         </ul>
       </div>
-      <div className={styles.cart}>
-        <div>
-          <Image src="/img/cart.png" alt="" width="30px" height="30px" />
-          <div className={styles.counter}>2</div>
+      <Link href="/cart" passHref>
+        <div className={styles.cart}>
+          <div>
+            <Image src="/img/cart.png" alt="" width="30px" height="30px" />
+            <div className={styles.counter}>{quantity}</div>
+          </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 }
