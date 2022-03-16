@@ -17,6 +17,7 @@
 .table {
   width: 100%;
   border-spacing: 20px;
+  text-align: left;
 }
 
 .name {
@@ -63,6 +64,7 @@
   color: teal;
   font-weight: bold;
 }
+
 @media screen and (max-width: 480px) {
   .container {
     flex-direction: column;

@@ -241,7 +241,7 @@
 
 .arrowPrev, .arrowNext {
   border: 2px solid white;
-  background-color: transparent;
+  background-color: rgb(199, 198, 198);
   color: crimson;
   cursor: pointer;
   height: 2rem;
