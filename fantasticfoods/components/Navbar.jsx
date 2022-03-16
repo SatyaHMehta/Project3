@@ -24,7 +24,9 @@ export default function Navbar() {
       </div>
       <div className={styles.item}>
         <ul className={styles.list}>
-          <li className={styles.listItem}>Homepage</li>
+          <Link href={"/"} passHref>
+            <li className={styles.listItem}>Homepage</li>
+          </Link>
           <li className={styles.listItem}>Products</li>
           <li className={styles.listItem}>Menu</li>
           <Image src="/img/logo.PNG" alt="" width="160px" height="69px" />
@@ -36,7 +38,10 @@ export default function Navbar() {
       <Link href="/cart" passHref>
         <div className={styles.cart}>
           <div>
-            <Image src="/img/cart.png" alt="" width="30px" height="30px" />
+            <div className={styles.cartpic}>
+              <Image src="/img/cart.png" alt="" width="30px" height="30px" />
+            </div>
+
             <div className={styles.counter}>{quantity}</div>
           </div>
         </div>
