@@ -34,9 +34,11 @@ export default function Navbar() {
         </ul>
       </div>
       <Link href="/cart" passHref>
+        
         <div className={styles.cart}>
           <div>
-            <Image src="/img/cart.png" alt="" width="30px" height="30px" />
+            <div className={styles.cartpic}><Image src="/img/cart.png" alt="" width="30px" height="30px" /></div>
+            
             <div className={styles.counter}>{quantity}</div>
           </div>
         </div>

@@ -1,9 +1,10 @@
-.container{
+/* .container{
     height: calc(100vh - 100px);
-    background-color: rgb(36, 35, 34);
+    background-color: rgb(36, 35, 34); 
     overflow: hidden;
-}
-.arrowContainer{
+    flex: 1;
+} */
+/* .arrowContainer{
     position: absolute;
     margin: auto;
     width: 10%;
@@ -12,24 +13,272 @@
     bottom:0;
     cursor: pointer;
     z-index: 2;
-}
+    color: black;
+} */
 
-.wrapper{
+/* .wrapper{
     width: 300vw;
     height: 100%;
     display: flex;
     transition: all 1.5s ease-in-out;
-}
+} */
 
-.imgContainer{
+/* .imgContainer{
     width: 100vw;
     height: 100%;
-    position: relative;
+    position: relative; 
+    width: 100%;
+    align-self: center;
+} */
+
+
+/* ================================== */
+/* .header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 0.5rem;
+    height:100vh;
+    
+    
+} */
+/* .headingImg{
+    width: 100%;
+    align-self: center;
+} */
+
+/* .headerContent{
+    display: flex;
+    flex-direction: column;
+    /* flex: 1; 
+} */
+
+/* .contentMain{
+    display: flex ;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+} */
+
+/* .contentMain h1{
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+
+} */
+
+/* .contentMain button{
+   background-color: black;
+   color: white;
+   width: 200px;
+   display: flex;
+   justify-content: space-between;
+   align-content: center;
+   padding: 1rem 1.5rem;
+   outline:none;
+   border:none;
+   font-size:1rem;
+   border-bottom-left-radius: 25px;
+   border-top-right-radius: 25px;
+   border-top-left-radius: 25px;
+   cursor:pointer;
+   margin-top:2.5rem;
+  
 }
 
-@media screen and (max-width: 480px) {
+.contentMain p{
+   font-weight: 500;
+} */
+
+/* ================================== */
+
+
+/* Slideshow container */
+/* .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  } */
+  
+  /* Caption text */
+  /* .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  } */
+  
+  /* Number text (1/3 etc) */
+  /* .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  } */
+  
+  /* The dots/bullets/indicators */
+  /* .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  } */
+  
+  /* .active {
+    background-color: #717171;
+  } */
+  
+  /* Fading animation */
+  /* .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  } */
+  
+  /* @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  } */
+
+/* ================================== */
+
+
+/* @media screen and (max-width: 480px) {
     .container{
         height: 50vh;
         position: relative;
     }
+}  */
+
+.slider {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: all 0.5s ease;
+}
+
+@media screen and (min-width: 600px) {
+  .slide img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.slide img {
+   /* width: 100%; */
+  height: 100%;
+}
+
+.current {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.content {
+  position: absolute;
+  top: 23rem;
+  left: 5rem;
+  /* opacity: 0; */
+  width: 50%;
+  color: #fff;
+  padding: 3rem;
+  background: rgba(0, 0, 0, 0.3);
+  animation: slide-up 1s ease 0.5s;
+  /* animation-delay: 1s; */
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+
+@keyframes slide-up {
+  0% {
+    visibility: visible;
+    top: 23rem;
+  }
+  100% {
+    visibility: visible;
+    top: 17rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    width: 80%;
+  }
+}
+
+.content > * {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.current .content {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all .5s ease;
+}
+
+.arrowPrev, .arrowNext {
+  border: 2px solid white;
+  background-color: transparent;
+  color: crimson;
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 999;
+  top: 35%;
+  right: 1.5rem;
+}
+.arrow:hover {
+  background-color: #fff;
+  color: #777;
+}
+
+.arrowNext {
+  top: 35%;
+  right: 1.5rem;
+}
+.arrowPrev {
+  top: 35%;
+  left: 1.5rem;
+}
+
+/* hr {
+  height: 2px;
+  background: white;
+  width: 50%;
+} */
+.fill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
+}
+.fill img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%
 }
