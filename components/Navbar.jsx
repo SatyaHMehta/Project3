@@ -28,7 +28,9 @@ export default function Navbar() {
             <li className={styles.listItem}>Homepage</li>
           </Link>
           <li className={styles.listItem}>Products</li>
-          <li className={styles.listItem}>Menu</li>
+          <Link href={"/Menu.pdf"}>
+            <li className={styles.listItem}>Menu</li>
+          </Link>
           <Image src="/img/logo2.PNG" alt="" width="160px" height="69px" />
           <li className={styles.listItem}>Events</li>
           <li className={styles.listItem}>Blog</li>
