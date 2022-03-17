@@ -1,6 +1,6 @@
 // import React from "react";
 // import styles from "../styles/Featured.module.css";
-// import Image from "next/image";
+import Image from "next/image";
 // import { useState } from "react";
 
 // export default function Featured() {
@@ -128,7 +128,7 @@ const Featured = () => {
       auto();
     }
     return () => clearInterval(slideInterval);
-  }, [currentSlide]);
+  }, []);
 
   return (
     <div className={styles.slider}>
