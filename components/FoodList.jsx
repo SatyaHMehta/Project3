@@ -1,7 +1,22 @@
 import styles from "../styles/FoodList.module.css";
 import FoodCard from "./FoodCard";
+import React, {useState, useEffect } from "react";
+import axios from "axios";
 
-export default function FoodList({ productList }) {
+export default function FoodList() {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    async function fetchData() {
+      try{
+        const res = await axios.get("http://localhost:3000/api/products");
+        setProducts(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    }
+    fetchData();
+  },[]);
+  console.log(products)
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Best Indian Food in Town</h1>
@@ -11,7 +26,7 @@ export default function FoodList({ productList }) {
         veggies. we do take party orders.
       </p>
       <div className={styles.wrapper}>
-        {productList.map((product) => (
+        {products.map((product) => (
           <FoodCard key={product._id} product={product} />
         ))}
       </div>
