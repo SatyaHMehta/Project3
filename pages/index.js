@@ -4,11 +4,11 @@ import Featured from "../components/Featured";
 import FoodList from "../components/FoodList";
 import styles from "../styles/Home.module.css";
 
-export default function Home({ productList }) {
+export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Asha's Kitchen</title>
+        <title>Asha&apos;s Kitchen</title>
         <meta name="description" content="Home Cooked Gujrati Meals" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -20,8 +20,7 @@ export default function Home({ productList }) {
 
 // export const getServerSideProps = async () => {
 //   const res = await axios.get("http://localhost:3000/api/products");
-//   console.log(res);
-//   return await {
+//   return {
 //     props: {
 //       productList: res.data,
 //     },
