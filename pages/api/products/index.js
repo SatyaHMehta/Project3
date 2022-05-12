@@ -5,10 +5,8 @@ export default async function handler(req, res) {
   try{
     await dbConnect();
     if (method === "GET") {
-      try {
-        console.log('trying to get products')
+      try { 
         const products = await Product.find();
-        console.log(products)
         res.status(200).json(products);
       } catch (err) {
         res.status(500).json(err);

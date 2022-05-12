@@ -3,6 +3,7 @@ import Head from "next/head";
 import Featured from "../components/Featured";
 import FoodList from "../components/FoodList";
 import styles from "../styles/Home.module.css";
+import dbConnect from "../util/mongo"
 
 export default function Home({productList}) {
   return (
@@ -19,7 +20,8 @@ export default function Home({productList}) {
 }
 
 export const getServerSideProps = async()=>{
-  const res = await axios.get("http://localhost:3000/api/products"||"https://ashaskitchen-satyahmehta.vercel.app/api/products");
+  await dbConnect();
+  const res = await axios.get(`${process.env.LOCAL_URL}/api/products`||`${process.env.API_ROOT}/api/products`);
   console.log(res.data)
   return{
     props:{
