@@ -4,31 +4,32 @@ import Featured from "../components/Featured";
 import FoodList from "../components/FoodList";
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
+export default function Home({productList}) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Asha&apos;s Kitchen</title>
+        <title>Fantastic Foods</title>
         <meta name="description" content="Home Cooked Gujrati Meals" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Featured />
-      <FoodList />
+      <FoodList products={productList}/>
     </div>
   );
 }
 
-// export const getServerSideProps = async () => {
-//   const res = await axios.get("http://localhost:3000/api/products");
-//   return {
-//     props: {
-//       productList: res.data,
-//     },
-//   };
-// };
+export const getServerSideProps = async()=>{
+  const res = await axios.get("http://localhost:3000/api/products");
+  console.log(res.data)
+  return{
+    props:{
+      productList: res.data
+    }
+  }
+}
 // export const getServerSideProps = async () => {
 //   const res = await fetch("http://localhost:3000/api/products");
-//   let res2 = await res.json()
+//   const res2 = res.json()
 //   return {
 //     props: {
 //       productList: res2,

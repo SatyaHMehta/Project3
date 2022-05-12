@@ -1,5 +1,5 @@
 .container{
-    height: calc(100vh - 500px);
+    height: calc(100vh);
     background-color:rgb(36, 35, 34) ;
     display: flex;
 }
