@@ -26,7 +26,7 @@ Mongoose
 Redux.js
 Paypal API
 React Icons
-link to deployed application: https://satyahmehta.github.io/firstGroupProject/
+link to deployed application: deployment in process, app works locally upon refreshing. 
 
 link to Project Repo: https://github.com/SatyaHMehta/firstGroupProject.git
 
