@@ -95,7 +95,7 @@ export default function Product({ food }) {
 }
 export const getServerSideProps = async ({ params }) => {
   const res = await axios.get(
-    `http://localhost:3000/api/products/${params.id}`
+    `${process.env.API_ROOT}/api/products/${params.id}`
   );
   return {
     props: {
