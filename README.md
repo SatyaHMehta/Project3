@@ -28,7 +28,7 @@ Paypal API
 React Icons
 link to deployed application: deployment in process, app works locally upon refreshing. 
 
-link to Project Repo: https://github.com/SatyaHMehta/firstGroupProject.git
+link to Deployd App: https://github.com/SatyaHMehta/Project3
 
 Images of App:<img width="1427" alt="Screen Shot 2022-03-16 at 11 29 15 AM" src="https://user-images.githubusercontent.com/95049535/158627020-0373216b-f873-44e6-86a5-ce77a7ad6b6d.png">
 <img width="1306" alt="Screen Shot 2022-03-16 at 11 29 36 AM" src="https://user-images.githubusercontent.com/95049535/158627091-fd250e5d-4ce7-4d55-8421-7ee5db9b5ee1.png">
